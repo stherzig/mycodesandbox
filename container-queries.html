@@ -3,9 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="container-queries.css">
   <title>Container-Queries</title>
+  <style>
+    .container {
+  container-type: inline-size;
+  max-width: 800px;
+  margin-inline: auto;
+  border: 1px solid red;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@container (min-width: 500px) {
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .links,
+    .rechts {
+      background-color: orange;
+      min-width: 300px;
+    }
+  }
+}
+
+.links,
+.rechts {
+  border: 1px solid green;
+  padding: 10px;
+  background-color: limegreen;
+}
+  </style>
+
 </head>
 <body>
   <div class="wrapper">

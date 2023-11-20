@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>index</title>
+  <style>
+    .box {
+  width: 800px;
+  border: 1px solid red;
+  padding: 1em;
+  display: flow-root;
+}
+
+.box2 {
+  margin-top: 2em;
+  width: 800px;
+  border: 1px solid red;
+  padding: 1em;
+}
+
+img {
+  float: right;
+  margin-left: 1em;
+}
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>floats können anstatt mit clear: both oder <br>clearfix mit display: flow-root gecleart werden</h1>
+   <div class="box">
+    <img src="img/test.jpg" alt="" />
+    <p>die box enthält display: flow-root </p>
+   </div>
+
+   <div class="box2">
+    <img src="img/test.jpg" alt="" />
+    <p>ohne display: flow-root</p>
+   </div>
+  </div><!-- wrapper -->
+  
+</body>
+</html>

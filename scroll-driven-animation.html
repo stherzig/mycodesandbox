@@ -4,11 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="scroll-driven-animation.css">
   <title>scroll-driven-animation</title>
+  <style>
+    h1 {
+  margin: 30rem 0;
+  text-align: center;
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p {
+  animation: steff linear;
+  animation-timeline: view();
+}
+@keyframes steff {
+  from {
+    /* opacity: 0; */
+    color: yellow;
+  }
+  to {
+    /* opacity: 1; */
+    color: black;
+  }
+}
+
+  </style>
 </head>
 <body>
-  <h1>Lorem ipsum dolor sit</h1>
+  <h1>Lorem ipsum dolor sit (derzeit nur Chromium)</h1>
   <div class="wrapper container">
     
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, rem voluptate, quibusdam ipsum rerum voluptatem quasi debitis soluta recusandae ea officia, iure sed ut doloribus ex veritatis eligendi quos ullam temporibus est explicabo. Unde deserunt magni aliquid impedit, et assumenda minus eligendi repellendus animi?</p>

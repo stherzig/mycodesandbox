@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>gradient</title>
+  <style>
+    .myGradient {
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+}
+
+.myGradient-1 {
+  background-image: radial-gradient(red, green, blue);
+}
+
+.myGradient-2 {
+  background-image: radial-gradient(red 5%, green 15%, blue 60%);
+}
+
+.myGradient-3 {
+  background-image: radial-gradient(
+    #fff 50%,
+    #000 50%
+    );
+}
+
+  </style>
+</head>
+<body>
+  
+   
+    <main>
+      <h2>einfacher Gradient</h2>
+      <code>background-image: radial-gradient(red, green, blue);</code>
+      <div class="myGradient myGradient-1"></div>
+
+      <h2>einfacher Gradient mit verschieden verteilten color stops</h2>
+      <code>background-image: radial-gradient(red 5%, green 15%, blue 60%);</code>
+      <div class="myGradient myGradient-2"></div>
+
+      <h2>einfacher Gradient mit harten Übergängen</h2>
+      <code>background-image: radial-gradient(white 50%, black 50%);</code>
+      <div class="myGradient myGradient-3"></div>
+    </main>
+   
+ 
+  
+</body>
+</html>

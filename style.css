@@ -28,13 +28,18 @@ body {
   color: #333;
   font-size: 1.2rem;
   line-height: 1.5;
+  display: grid;
+  place-content: center;
 }
 .wrapper {
   height: 100vh;
 }
+header {
+  margin-bottom: 2rem;
+}
 .container {
   max-width: 1024px;
-  margin: auto;
+  margin: 1rem auto;
 }
 /* .wrapper {
   display: grid;
@@ -42,3 +47,22 @@ body {
   height: 100dvh;
   border: 3px solid #333;
 } */
+
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 1rem;
+}
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}

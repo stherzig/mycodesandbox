@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Beschriftung anpassen</title>
+  <style>
+    .bildbox-1 {
+  margin-bottom: 3rem;
+}
+.bildbox-1 img,
+.bildbox-2 img {
+  max-width: 700px;
+}
+
+.bildbox-2 figure {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+figcaption {
+  font-size: 90%;
+}
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Bildbeschriftung - Länge mit <code>width: min-content</code> anpassen</h1>
+    </header>
+    
+    
+    <main>
+      <div class="container">
+        <p>
+          das Elternelement <code>figure</code> erhält:
+        <code>
+          width: min-content;
+        </code><br>
+        das Kindelement <code>img</code> erhält <code>max-width: 600px;</code><br>
+        <code>figcaption</code>- in der sich die Bildunterschrift befindet - ist ein Kind von <code>figure</code> und sibling von <code>img</code> und benötigt keine weiteren CSS Angaben
+        </p>
+        
+        <h2>ohne width: min-content</h2>
+        <div class="bildbox-1">
+          <figure>
+            <img src="img/2021-02-20_082753.jpg" alt="Landschaft">
+            <figcaption>Eine Bildunterschrift, die auch etwas länger sein kann, die auch etwas länger sein kann, die auch etwas länger sein kann, die auch etwas länger sein kann</figcaption>
+          </figure>
+        </div>
+        <h2>mit width: min-content</h2>
+
+        <div class="bildbox-2">
+          <figure>
+            <img src="img/2021-02-20_082753.jpg" alt="Landschaft">
+            <figcaption>Eine Bildunterschrift, die auch etwas länger sein kann, die auch etwas länger sein kann, die auch etwas länger sein kann, die auch etwas länger sein kann</figcaption>
+          </figure>
+        </div>
+      </div>
+    </main>
+  </div><!-- wrapper -->
+</body>
+</html>
