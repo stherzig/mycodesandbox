@@ -23,12 +23,14 @@
 
     .div-b {
       
-backdrop-filter: brightness(30%);
+backdrop-filter: brightness(50%);
     }
 
     .div-c {
-      backdrop-filter: none;
       backdrop-filter: contrast(40%);
+    }
+    span {
+      background: #fff;
     }
   </style>
 </head>
@@ -40,19 +42,21 @@ backdrop-filter: brightness(30%);
     <nav>
       
     <main>
-        
+        <p>
+          funktioniert anscheinend nicht im firefox
+        </p>
             <section class="backdrop-container">
-              <span class="code">Afddfdfdfdjfkdjfkdfjdk</span>
+              
                 <div class="div-a">
-                    
+                    <span>backdrop-filter: sepia(90%);</span>
                 </div>
 
                 <div class="div-b">
-                    B
+                  <span>backdrop-filter: brightness(50%);</span>
                 </div>
 
                 <div class="div-c">
-                    C
+                  <span>backdrop-filter: contrast(40%);</span>
                 </div>
             </section>
         
