@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+	--hue: 240;
+}
+
+section > div:nth-child(1) {
+	background-color: hsl(var(--hue), 100%, 50%);
+}
+
+section > div:nth-child(2) {
+	background-color: hsl(var(--hue), 70%, 50%);
+}
+
+section > div:nth-child(3) {
+	background-color: hsl(var(--hue), 50%, 50%);
+}
+section > div:nth-child(4) {
+	background-color: hsl(var(--hue), 20%, 50%);
+}
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 600px; 
+      gap: 1rem;
+    }
+    section > div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid silver;
+    }
+  </style>
+  <title>hsl</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>hsl</h1>
+    </header>
+   
+    <main>
+      <h2>HSL</h2>
+      <p>
+        hsl(hue=Farbton, saturation=Sättigung, lightness=Helligkeit)<br>
+        Farbton von 0 bis 360, saturation und lightness mit Prozentangaben<br>
+
+      </p>
+      <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        hier habe ich die Sätting auf 100%, 70%, 50% ubnd 20% gesetzt 
+      </section>
+      <p>
+        ein Beispiel mit CSS-Variblen könnte so aussehen:
+      </p>
+      <code>
+        :root {<br>
+          --hue: 90;<br>
+        }<br>
+        
+        div:nth-child(1) {<br>
+          background-color: hsl(var(--hue), 100%, 50%);<br>
+        }<br>
+        
+        div:nth-child(2) {<br>
+          background-color: hsl(var(--hue), 70%, 50%);<br>
+        }<br>
+      </code>
+      
+    </main>
+   
+  </div><!-- wrapper -->
+  
+</body>
+</html>
