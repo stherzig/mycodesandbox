@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>Container-Queries</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5;
+    }
+    
+    section {
+      container-type: inline-size;
+      max-width: 800px;
+      border: 1px solid green;
+    }
+    .card {
+      display: flex;
+    }
+    .card_image {
+      object-fit: cover;
+    }
+    .card_content {
+      padding: 1em;
+    }
+    @container (width <= 500px) {
+      .card_content {color: red;}
+      .card {
+        flex-direction: column;
+      }
+    }
+      
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    
+    <section>
+      <div class="card">
+        <div class="card_img">
+          <img src="img/2021-09-15_094227.jpg" alt="">
+        </div>
+      <div class="card_content">
+        <h2>Hallo Überschrift</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae cupiditate, architecto illum veritatis accusantium soluta officiis optio fuga temporibus magni ducimus eum minima.</p>
+      </div>
+      </div>
+    </section>
+    <pre><code class="language-css">
+      section {
+        container-type: inline-size;
+        max-width: 800px;
+        border: 1px solid green;
+      }
+      .card {
+        display: flex;
+      }
+      .card_image {
+        object-fit: cover;
+      }
+      .card_content {
+        padding: 1em;
+      }
+      @container (width <= 500px) {
+        .card_content {color: red;}
+        .card {
+          flex-direction: column;
+        }
+      }
+    </code></pre>
+
+  </div><!-- wrapper -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+</html>
