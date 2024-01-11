@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>float-display-flow-root</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5;
+    }
+    
+    section {
+      max-width: 800px;
+      border: 1px solid orangered;
+    }
+    
+    p {
+      padding: 1rem;
+    }
+      
+    .bild-rechts {
+      float: right;
+    }
+    img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      object-fit: cover;
+    }
+    section > div {
+      border-bottom: 1px solid green;
+    }
+
+    .my-flow-root {
+      display: flow-root;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    
+    <section>
+      <div class="my-flow-root">
+        <img class="bild-rechts" src="img/2021-09-27_092739.jpg" alt="">
+        <p>
+          img + p in einem div mit display-flow-root
+        </p>
+      </div>
+      <div>
+        <img class="bild-rechts" src="img/2021-09-27_092739.jpg" alt="">
+        <p>
+          img + p in einem div ohne display:flow-root;
+        </p>
+      </div>
+    </section>
+
+    <pre><code class="language-css">
+      .my-flow-root { 
+        display: flow-root;
+      }
+    </code></pre>
+
+  </div><!-- wrapper -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+</html>

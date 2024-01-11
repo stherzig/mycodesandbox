@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>has</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5;
+    }
+
+    figure:has(figcaption) {
+	color: red;
+}
+    
+    section {
+      max-width: 800px;
+      border: 1px solid orangered;
+    }
+    
+    img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      object-fit: cover;
+    }
+   
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    
+    <section>
+
+      <figure>
+        <img class="bild-rechts" src="img/2021-09-27_092739.jpg" alt="">
+        <figcaption>Hallo Bildunterschrift</figcaption>
+      </figure>
+ 
+    </section>
+
+    <pre><code class="language-css">
+      figure:has(figcaption) {
+        color: red;
+      }
+    </code></pre>
+
+  </div><!-- wrapper -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+</html>
