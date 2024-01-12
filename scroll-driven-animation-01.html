@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>scroll-driven-animation 01</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+    }
+
+    
+    
+    section {
+      max-width: 800px;
+      
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+    
+    img {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      object-fit: cover;
+    }
+
+    .text, figure {
+      width: 50%;
+    }
+
+    .text {
+      padding: 1rem;
+    }
+
+    .extra-height {
+      height: 80vh;
+    }
+
+    .nks-fade-in {
+  animation: nks-fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry
+}
+
+@keyframes nks-fade-in {
+	
+	0% {
+		opacity: 0;
+		transform: translateY(400px)
+	}
+	
+	50% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0px)
+	}
+
+}
+   
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="extra-height">scroll-driven-animation</h1>
+    <section>
+      <div class="text">
+        <h2>hello world</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque distinctio necessitatibus dolore nihil eligendi optio quam error ipsum veniam. Iusto possimus laboriosam quibusdam animi!
+        </p>
+        
+      </div>
+      <figure>
+        <img class="nks-fade-in" src="img/2021-09-27_092739.jpg" alt="">
+        <figcaption>Hallo Bildunterschrift</figcaption>
+      </figure>
+ 
+    </section>
+
+    
+
+    <section>
+      
+      <figure>
+        <img class="nks-fade-in" src="img/2021-09-27_092739.jpg" alt="">
+        <figcaption>Hallo Bildunterschrift</figcaption>
+      </figure>
+    <div class="text">
+        <h2>hello world</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque distinctio necessitatibus dolore nihil eligendi optio quam error ipsum veniam. Iusto possimus laboriosam quibusdam animi!
+        </p>
+        
+      </div>
+    </section>
+
+    <section>
+      <div class="text">
+        <h2>hello world</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque distinctio necessitatibus dolore nihil eligendi optio quam error ipsum veniam. Iusto possimus laboriosam quibusdam animi!
+        </p>
+        
+      </div>
+      <figure>
+        <img class="nks-fade-in" src="img/2021-09-27_092739.jpg" alt="">
+        <figcaption>Hallo Bildunterschrift</figcaption>
+      </figure>
+ 
+    </section>
+
+    <pre><code class="language-css">
+      .nks-fade-in {
+        animation: nks-fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry
+      }
+      
+      @keyframes nks-fade-in {
+        
+        0% {
+          opacity: 0;
+          transform: translateY(400px)
+        }
+        
+        50% {
+          opacity: 0;
+        }
+        
+        100% {
+          opacity: 1;
+          transform: translateY(0px)
+        }
+      
+      }
+    </code></pre>
+
+  </div><!-- wrapper -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+</html>
