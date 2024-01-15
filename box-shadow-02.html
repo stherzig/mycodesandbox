@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>box-shadow</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      display: grid;
+      place-content: center;
+    }
+    .myBox {
+      width: 200px;
+      height: 200px;
+      background: limegreen;
+      box-shadow: 
+        10px 0px 0px 3px blue,
+        0px 20px 0px 0px red,
+        0px -30px 0px 0px orange;
+        
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    
+    <div class="myBox"></div>
+
+    <pre><code class="language-css">
+      .myBox {
+        width: 200px;
+        height: 200px;
+        background: limegreen;
+        box-shadow: /* offset-x | offset-y | blur-radius | spread-radius | color */
+          10px 0px 0px 3px blue,
+          0px 20px 0px 0px red,
+          0px 30px 0px 0px orange;
+  
+      }
+    </code></pre>
+
+  </div><!-- wrapper -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+
+  
+</html>
