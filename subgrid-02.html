@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>subgrid</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    article {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));	
+    grid-template-rows: auto 1fr auto;
+    gap: 1em;
+}
+
+article h2 {
+    grid-column: 1 / -1;
+}
+
+figure {
+    grid-row: auto / span 3; /* use three rows of the parent grid */
+    display: grid;
+    grid-template-rows: subgrid;
+    gap: 0; /* set the gap to 0 on the subgrid so our cards don’t have gaps */
+    border: medium solid #c32e04;
+    margin: 0;
+}
+
+figure h3,
+figure figcaption {
+	background: #c32e04;	
+	color: white;	
+	padding: 0.5em;
+	
+}
+  
+figure h3 {
+	margin: 0;
+	text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+        
+  </style>
+
+</head>
+<body>
+  <p>
+    dieses beispiel stammt von https://wiki.selfhtml.org/wiki/CSS/Tutorials/Grid/Verschachtelte_Raster
+  </p>
+  
+  <article>
+    <h2>Unser Angebot</h2>
+    <figure>
+        <h3>Rohstoffe</h3>
+          <img src="img/2021-02-20_082753.jpg" alt="">
+          <figcaption>Kiefer in unserem nachhaltig bewirtschaftenen Wald</figcaption>
+    </figure>
+    <figure>
+        <h3>Büroausstattungen für KMU</h3>
+        <img src="img/2021-02-20_082753.jpg" alt="">
+          <figcaption>Schreibtische, Stühle und Regale für ihr Büro</figcaption>
+    </figure>    
+    <figure>
+        <h3>Schöner Wohnen mit Lenor</h3>
+        <img src="img/2021-02-20_082753.jpg" alt="">
+          <figcaption>Entspannen und Medien konsumieren in unseren Wohn-Möbeln</figcaption>
+    </figure>    
+    <figure>
+        <h3> Betten</h3>
+        <img src="img/2021-02-20_082753.jpg" alt="">
+          <figcaption>Betten in allen Breiten</figcaption>
+    </figure>        
+  </article>
+  
+
+
+  <pre><code class="language-css">
+    /* ... */
+  </code></pre>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+</html>

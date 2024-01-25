@@ -3,57 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
   <title>backdrop-filter</title>
   <style>
-    .backdrop-container {
-      background: url(img/test.jpg);
-        width: 800px;
-        height: auto;
+    body {
+      font-family: "segoe ui", sans-serif;
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.5;
     }
+
+    .bg-image-a {
+      background-image: url(img/2021-02-20_082753.jpg);
+        width: 600px;
+        height: 400px;
+        background-size: cover;
+    }
+    .box-a {
+      
+      backdrop-filter: blur(10px);
+      backdrop-filter: sepia(90%);
+      -webkit-backdrop-filter: sepia(90%);
+      margin: auto;
+      width: 200px;
+      height: 100px;
+    }
+
+    
+
     div {
-        height: 200px;
-        
-        
+        height: 200px;  
     }
+
     .div-a {
       backdrop-filter: sepia(90%);
-      
     }
 
     .div-b {
-      
-backdrop-filter: brightness(50%);
+      backdrop-filter: brightness(50%);
     }
 
     .div-c {
       backdrop-filter: contrast(40%);
     }
-    span {
+    section span {
       background: #fff;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper container">
-    <header>
-      <h1>backdrop-filter</h1>
-    </header>
-    <nav>
-      
+ 
     <main>
+      <h1>backdrop-filter</h1>
         <p>
           funktioniert anscheinend nicht im firefox
         </p>
-            <section class="backdrop-container">
-              
-                <div class="div-a">
-                    <span>backdrop-filter: sepia(90%);</span>
+
+            <section class="bg-image-a">
+                <span>backdrop-filter: sepia(90%);</span>
+
+                <div class="box-a">
+                  <p>backdrop-filter: blur(10px)</p>
                 </div>
+
+            </section>
+
+            <section>
 
                 <div class="div-b">
                   <span>backdrop-filter: brightness(50%);</span>
                 </div>
+
+              </section>
+
+              <section>
 
                 <div class="div-c">
                   <span>backdrop-filter: contrast(40%);</span>
@@ -62,8 +85,33 @@ backdrop-filter: brightness(50%);
         
       
     </main>
-    
-  </div><!-- wrapper -->
+    <pre><code class="language-css">
+      .backdrop-container {
+        background: url(img/test.jpg);
+          width: 800px;
+          height: auto;
+      }
   
+      div {
+          height: 200px;  
+      }
+  
+      .div-a {
+        backdrop-filter: sepia(90%);
+      }
+  
+      .div-b {
+        backdrop-filter: brightness(50%);
+      }
+  
+      .div-c {
+        backdrop-filter: contrast(40%);
+      }
+      span {
+        background: #fff;
+      }
+    </code></pre>
+    
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>  
 </body>
 </html>

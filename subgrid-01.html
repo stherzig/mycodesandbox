@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>subgrid</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .warnung {
+  background-color: pink;
+  padding: 1rem;
+  border-radius: .2rem;
+}
+@supports  (grid-template-rows: subgrid) {
+  .warnung {
+    display: none;
+  }
+}
+.gridcontainer {
+  color: #33363a;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.produkt {
+  padding-top: 0.8rem;
+  border: 1px solid #cad0d2;
+  border-radius: 0.2rem;
+
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+.text {
+  color: #57727c;
+  padding: 0.2rem 0.4rem;
+}
+
+.preis {
+  color: #57727c;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  border-top: 1px solid #d7dbdd;
+  background-color: #eef3f5;
+  text-align: center;
+}
+
+        
+  </style>
+
+</head>
+<body>
+  <p>
+    dieses beispiel stammt von Florence Maurice https://maurice-web.de/article/subgrid-das-wichtigste-zum-neuen-spieler-bei-css-grid/
+  </p>
+  
+  <div class="gridcontainer"> 
+    <div class="produkt"> 
+      <p class="text">Lorem ipsum</p>
+      <div class="preis">25 €</div>
+    </div> 
+    <div class="produkt"> 
+      <p class="text">Lorem ipsum</p> 
+      <div class="preis">25 € <br>echt :)</div>
+     </div> <!-- weitere Elemente --> 
+  </div>
+  <pre><code class="language-css">
+    .gridcontainer { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      grid-gap: 1rem; 
+    }
+    .produkt { 
+      grid-row: span 2; 
+      display: grid; 
+      grid-template-rows: subgrid;
+    }
+  </code></pre>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+</html>
