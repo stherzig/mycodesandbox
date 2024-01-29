@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+  <title>grid</title>
+  <style>
+    body {
+      font-family: "segoe ui", sans-serif;
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    .wrapper > * {
+      margin: 4px;
+      padding: 5px;
+      border-radius: 7px;
+    }
+
+    .wrapper {
+      font: 120% sans-serif;
+      max-width: 960px;
+      margin: auto;
+      background: #8fcb8f;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+    }
+
+    article {
+      background: #FFFFCB;
+      grid-column: span 2;
+    }
+
+    @media all and (max-width: 50em) {
+      article {
+        grid-column: span 4;
+      }
+    }
+
+    @media all and (max-width: 30em) {
+      article {
+        grid-column: span 6;
+      }
+    }
+    
+  </style>
+
+</head>
+<body>
+  <p>
+    dieses beispiel stammt von Florence Maurice -- Grid Grundkurs<br>
+    wir haben im wrapper 12 spalten, die artikel erstrecken sich für destop über 2 Spalten, tablet über vier spalten - also drei pro zeile und mobil 6 Spalten also 2 artikel pro zeile
+  </p>
+  <div class="wrapper">
+
+  
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+  <article><h2>article</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</article>
+    
+
+   
+
+  </div><!-- wrapper -->
+  <pre><code class="language-css">
+    .wrapper {
+      font: 120% sans-serif;
+      max-width: 960px;
+      margin: auto;
+      background: #8fcb8f;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+    }
+
+    article {
+      background: #FFFFCB;
+      grid-column: span 2;
+    }
+
+    @media all and (max-width: 50em) {
+      article {
+        grid-column: span 4;
+      }
+    }
+
+    @media all and (max-width: 30em) {
+      article {
+        grid-column: span 6;
+      }
+    }
+  </code></pre>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+</body>
+</html>
