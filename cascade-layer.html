@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cascade Layer</title>
+
+  <style>
+ /* Definieren der Cascade Layers */
+@layer base {
+    .text {
+        font-size: 16px;
+        color: black;
+    }
+}
+
+@layer typography {
+    .text {
+        @apply font-serif;
+        font-weight: bold;
+    }
+}
+
+@layer utilities {
+    .text {
+        @apply text-center;
+        color: blue;
+    }
+}
+
+/* Anwendung der Stile */
+h1 {
+    @apply text;
+}
+
+  </style>
+</head>
+<body>
+  <h1 class="text">Willkommen zu CSS Cascade Layers!</h1>
+    <p class="text">Dies ist ein einfaches Beispiel, um die Verwendung von Cascade Layers zu demonstrieren.</p>
+</body>
+</html>
