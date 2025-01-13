@@ -7,30 +7,33 @@
 
   <style>
  /* Definieren der Cascade Layers */
+ @layer reset, theme, layout, content, components, utility;
+
+@layer reset {
+    /* Reset-Stile */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 @layer base {
-    .text {
-        font-size: 16px;
-        color: black;
+    /* Basis-Stile */
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
     }
 }
 
-@layer typography {
-    .text {
-        @apply font-serif;
-        font-weight: bold;
+@layer components {
+    /* Komponenten-Stile */
+    .button {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
     }
-}
-
-@layer utilities {
-    .text {
-        @apply text-center;
-        color: blue;
-    }
-}
-
-/* Anwendung der Stile */
-h1 {
-    @apply text;
 }
 
   </style>
